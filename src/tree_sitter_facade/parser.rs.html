@@ -337,6 +337,27 @@
 <span id="335">335</span>
 <span id="336">336</span>
 <span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
 </pre><pre class="rust">
 <span class="comment">// FIXME: make .logger() return type uniform</span>
 
@@ -479,6 +500,18 @@
         <span class="kw">fn</span> <span class="ident">from</span>(<span class="ident">inner</span>: <span class="ident">tree_sitter::Parser</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
             <span class="self">Self</span> { <span class="ident">inner</span> }
         }
+    }
+
+    <span class="kw">impl</span> <span class="ident">std::panic::RefUnwindSafe</span> <span class="kw">for</span> <span class="ident">Parser</span> {
+    }
+
+    <span class="kw">unsafe</span> <span class="kw">impl</span> <span class="ident">Send</span> <span class="kw">for</span> <span class="ident">Parser</span> {
+    }
+
+    <span class="kw">impl</span> <span class="ident">Unpin</span> <span class="kw">for</span> <span class="ident">Parser</span> {
+    }
+
+    <span class="kw">impl</span> <span class="ident">std::panic::UnwindSafe</span> <span class="kw">for</span> <span class="ident">Parser</span> {
     }
 }
 
@@ -670,6 +703,15 @@
             <span class="kw">let</span> <span class="ident">options</span> <span class="op">=</span> <span class="ident">Default::default</span>();
             <span class="self">Self</span> { <span class="ident">inner</span>, <span class="ident">options</span> }
         }
+    }
+
+    <span class="kw">impl</span> <span class="ident">std::panic::RefUnwindSafe</span> <span class="kw">for</span> <span class="ident">Parser</span> {
+    }
+
+    <span class="kw">impl</span> <span class="ident">Unpin</span> <span class="kw">for</span> <span class="ident">Parser</span> {
+    }
+
+    <span class="kw">impl</span> <span class="ident">std::panic::UnwindSafe</span> <span class="kw">for</span> <span class="ident">Parser</span> {
     }
 }
 
